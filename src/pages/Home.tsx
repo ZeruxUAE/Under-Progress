@@ -65,13 +65,14 @@ export default function Home() {
     const saved = window.localStorage.getItem("under-progress-profile");
     if (saved) setProfile({ ...defaultProfile, ...JSON.parse(saved) });
   }, []);
+  useEffect(() => { const scale = profile.textSize === "Large" ? 1.18 : profile.textSize === "Compact" ? 0.9 : 1; const lineHeight = profile.spacing === "Relaxed" ? 1.8 : profile.spacing === "Tight" ? 1.2 : 1.5; document.documentElement.style.fontSize = `${scale * 100}%`; document.documentElement.style.setProperty("--up-live-line-height", String(lineHeight)); return () => { document.documentElement.style.fontSize = ""; document.documentElement.style.removeProperty("--up-live-line-height"); }; }, [profile.textSize, profile.spacing]);
 
   const startSetup = () => setLocation("/setup");
   const scrollTo = (id: string) => document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
   const copyTransferDetail = async (label: string, value: string) => { await navigator.clipboard.writeText(value.replace(/\s/g, "")); setCopiedDetail(label); window.setTimeout(() => setCopiedDetail(""), 1800); };
 
   return (
-    <main className="overflow-x-hidden bg-[#FBF8F0] text-[#102A43]">
+    <main className={`relative overflow-x-hidden bg-[#FBF8F0] text-[#102A43] up-live-profile ${profile.contrast ? "up-live-contrast" : ""} ${profile.focus ? "up-live-focus" : ""}`}>
       <header className="sticky top-0 z-40 border-b border-[#102A43]/10 bg-[#FBF8F0]/92 backdrop-blur-xl">
         <div className="mx-auto flex max-w-[1400px] items-center justify-between px-5 py-4 sm:px-8 lg:px-12"><BrandMark /><nav className="hidden items-center gap-7 text-sm font-semibold text-[#486581] lg:flex"><button onClick={() => scrollTo("how-it-works")} className="hover:text-[#0F8B7B]">How it works</button><button onClick={() => scrollTo("extension")} className="hover:text-[#0F8B7B]">Extension</button><button onClick={() => scrollTo("principles")} className="hover:text-[#0F8B7B]">Our principles</button></nav><div className="hidden lg:block"><button onClick={startSetup} className="rounded-full bg-[#102A43] px-5 py-2.5 text-sm font-bold text-white transition-transform active:scale-[0.97]">Choose your tools <ArrowRight className="ml-1 inline h-4 w-4" /></button></div><button aria-label="Open navigation" onClick={() => setMenuOpen(!menuOpen)} className="rounded-full border border-[#102A43]/15 p-2 lg:hidden">{menuOpen ? <X /> : <Menu />}</button></div>
         {menuOpen && <div className="border-t border-[#102A43]/10 bg-[#FBF8F0] px-5 py-5 lg:hidden"><div className="flex flex-col gap-4 text-sm font-bold"><button onClick={() => { scrollTo("how-it-works"); setMenuOpen(false); }} className="text-left">How it works</button><button onClick={() => { scrollTo("extension"); setMenuOpen(false); }} className="text-left">Extension</button><button onClick={startSetup} className="rounded-full bg-[#102A43] px-5 py-3 text-white">Choose your tools</button></div></div>}
