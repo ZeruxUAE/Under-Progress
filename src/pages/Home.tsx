@@ -1,6 +1,6 @@
 /** Under Progress — public product page with persistent user-controlled theme and profile preview. */
-import { ArrowRight, Check, CircleHelp, Focus, Headphones, Menu, Moon, MoveRight, Sparkles, Type, X } from "lucide-react";
-import { useEffect, useState } from "react";
+import { ArrowRight, Check, CircleHelp, Focus, Headphones, Menu, MoveRight, Sparkles, Type, X } from "lucide-react";
+import { useState } from "react";
 import { useLocation } from "wouter";
 import { ThemeToggle } from "../components/ThemeToggle";
 import { useTheme } from "../lib/useTheme";
@@ -10,18 +10,10 @@ const extensionAsset = "/assets/under-progress-extension.png";
 const logoAsset = "/assets/under-progress-logo.png";
 const extensionDownloadUrl = "https://github.com/ZeruxUAE/under-progress-extension/releases/latest/download/under-progress-extension.zip";
 const extensionRepoUrl = "https://github.com/ZeruxUAE/under-progress-extension";
-type Profile = { textSize: "Compact" | "Comfortable" | "Large"; spacing: "Tight" | "Balanced" | "Relaxed"; contrast: boolean; focus: boolean; };
-const defaults: Profile = { textSize:"Comfortable", spacing:"Balanced", contrast:false, focus:false };
-
-function applyProfile(profile: Profile) { const root = document.documentElement; root.style.fontSize = `${profile.textSize === "Large" ? 118 : profile.textSize === "Compact" ? 90 : 100}%`; root.style.setProperty("--up-live-line-height", profile.spacing === "Relaxed" ? "1.8" : profile.spacing === "Tight" ? "1.2" : "1.5"); root.dataset.upContrast = String(profile.contrast); root.dataset.upFocus = String(profile.focus); }
-
 export default function Home() {
   const [, setLocation] = useLocation();
-  const [profile, setProfile] = useState<Profile>(defaults);
   const [menuOpen, setMenuOpen] = useState(false);
   const { dark, toggleTheme } = useTheme();
-  useEffect(() => { const saved = window.localStorage.getItem("under-progress-profile"); if (saved) setProfile({ ...defaults, ...JSON.parse(saved) }); }, []);
-  useEffect(() => { applyProfile(profile); return () => { document.documentElement.style.fontSize=""; document.documentElement.style.removeProperty("--up-live-line-height"); delete document.documentElement.dataset.upContrast; delete document.documentElement.dataset.upFocus; }; }, [profile]);
   const goSetup = () => setLocation("/setup");
   const scrollTo = (id: string) => document.getElementById(id)?.scrollIntoView({ behavior:"smooth", block:"start" });
   return <main className="theme-shell profile-shell overflow-x-hidden"><header className="sticky top-0 z-40 border-b border-[var(--line)] bg-[var(--paper)]/94 backdrop-blur"><div className="mx-auto flex max-w-[1400px] items-center justify-between px-5 py-4 sm:px-8 lg:px-12"><button type="button" onClick={() => scrollTo("top")} className="flex items-center gap-3 text-left"><img src={logoAsset} alt="Under Progress mark" className="h-10 w-10 object-contain" /><span className="brand-ink font-serif text-xl font-semibold tracking-[-.045em]">Under Progress</span></button><nav className="hidden items-center gap-6 text-sm font-bold lg:flex"><button onClick={() => scrollTo("how-it-works")}>How it works</button><button onClick={() => scrollTo("extension")}>Extension</button><button onClick={() => scrollTo("support")}>Support</button><ThemeToggle dark={dark} onToggle={toggleTheme} /><button onClick={goSetup} className="rounded-full bg-[#0F8B7B] px-5 py-2.5 text-white">Choose your tools</button></nav><div className="flex items-center gap-2 lg:hidden"><ThemeToggle dark={dark} onToggle={toggleTheme} /><button aria-label="Open navigation" onClick={() => setMenuOpen(!menuOpen)} className="light-button rounded-full border border-[var(--line)] p-2">{menuOpen ? <X /> : <Menu />}</button></div></div>{menuOpen && <div className="theme-panel mx-4 mb-4 rounded-2xl p-4 lg:hidden"><div className="flex flex-col gap-3 text-sm font-bold"><button onClick={() => { scrollTo("how-it-works"); setMenuOpen(false); }}>How it works</button><button onClick={() => { scrollTo("extension"); setMenuOpen(false); }}>Extension</button><button onClick={goSetup} className="rounded-full bg-[#0F8B7B] px-4 py-3 text-white">Choose your tools</button></div></div>}</header>
