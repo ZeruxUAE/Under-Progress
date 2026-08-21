@@ -19,4 +19,6 @@ Import this folder into a new Vercel project. The included `vercel.json` uses a 
 
 ## Product scope
 
-The website includes the Under Progress landing experience, a preference-led setup flow, a live reading preview, and browser-local profile saving. It is deliberately backend-free: the local profile never leaves the visitor’s device. Production sign-in, cross-device synchronization, consent logging, and account recovery need a separate secure backend before they can be offered.
+The website includes the Under Progress landing experience, a disability-led multi-select setup flow, a named default accessibility preset, browser-local profile saving, and the website-to-extension connection flow. People can choose more than one disability or support need, fine-tune the preset, and change the choices later from either surface. The extension release is published at `https://github.com/ZeruxUAE/under-progress-extension/releases/latest` and the website’s download buttons use that release directly.
+
+The project-support section deliberately lists only non-financial ways to help until verified creator pages exist. When a Ko-fi, Buy Me a Coffee, or GitHub Sponsors page is created, replace the relevant support card link in `src/pages/Home.tsx` with that verified creator URL. The website remains backend-free: local profiles stay in the browser. Production sign-in, cross-device synchronization, consent logging, donation processing, and account recovery need a separate secure backend or approved third-party platform before they can be offered.
