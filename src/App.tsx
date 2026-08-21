@@ -1,4 +1,5 @@
 import { Route, Switch } from "wouter";
+import { Analytics } from "@vercel/analytics/react";
 import Home from "./pages/Home";
 import Setup from "./pages/Setup";
 
@@ -7,5 +8,14 @@ function NotFound() {
 }
 
 export default function App() {
-  return <Switch><Route path="/" component={Home} /><Route path="/setup" component={Setup} /><Route component={NotFound} /></Switch>;
+  return (
+    <>
+      <Switch>
+        <Route path="/" component={Home} />
+        <Route path="/setup" component={Setup} />
+        <Route component={NotFound} />
+      </Switch>
+      <Analytics />
+    </>
+  );
 }
