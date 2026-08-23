@@ -53,4 +53,4 @@
 - [x] Show a visible translation-in-progress status in the extension popup before speech begins.
 - [x] Verify on a normal English webpage that translated text, not English source text, is sent to speech with an available target-language voice.
 - [x] Record the completed end-to-end translated-speech verification result.
-- [ ] Commit and verify the final v0.5.7 translated-speech verification note in the production repository.
+- [x] Commit and verify the final v0.5.7 translated-speech verification note in the production repository.
