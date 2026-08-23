@@ -19,4 +19,6 @@
 - [x] Validate, publish, and verify the desktop-focused Vercel update.
 - [x] Reproduce the language confirmation action failure on the live site.
 - [x] Make language saving visible and verify the button updates local preference state.
-- [ ] Test, publish, and verify the repaired language confirmation action on Vercel.
+- [x] Test, publish, and verify the repaired language confirmation action on Vercel.
+- [x] Verify the visible saved-state message and button text after language confirmation on live Vercel.
+- [x] Confirm the saved language and document language update on live Vercel.
