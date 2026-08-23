@@ -41,6 +41,7 @@
 - [x] Audit all public website text and define the supported translated content for the saved language preference.
 - [x] Make the browser-language hint select only the initial website language, with the dropdown changing the full visible website text and document direction when needed.
 - [x] Preserve the language handoff to the extension, add regression coverage, and publish the multilingual website update.
-- [ ] Localize the document title and description alongside the selected website language.
-- [ ] Add and run a post-localization regression check confirming the selected website language still reaches extension Read Aloud.
-- [ ] Document the live post-localization language handoff verification result.
+- [x] Localize the document title and description alongside the selected website language.
+- [x] Add and run a post-localization regression check confirming the selected website language still reaches extension Read Aloud.
+- [x] Document the live post-localization language handoff verification result.
+- [x] Run an integrated post-localization language bridge test that confirms a selected website language drives extension Read Aloud settings.

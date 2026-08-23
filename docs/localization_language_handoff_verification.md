@@ -1,0 +1,7 @@
+# Localization and language handoff verification
+
+On 23 August 2026, the live Vercel website was checked after the localization update. Selecting **Simplified Chinese** immediately changed the homepage navigation, headline, explanatory sections, extension section, support section, language controls, and the entire setup flow into Chinese. The saved language control visibly confirmed the selection.
+
+The localization provider writes the chosen site language to `under-progress-language` and sends the same normalized value in the trusted `under-progress-website` `set-language` message. The website regression suite verifies that a Chinese selection produces `zh-CN` and an Arabic browser hint produces `ar` for that message. The extension bridge regression suite verifies that the content script receives `set-language`, persists the language in `underProgressSpeechLanguage`, and applies the matching selected voice for Read Aloud.
+
+The published Vercel deployment for commit `c7a427b` completed successfully. A clean Chromium run loaded the published v0.5.5 extension, selected Simplified Chinese in the live website language control, observed the Chinese headline, and verified that the extension stored `underProgressSpeechLanguage` and `underProgressProfile.language` as `zh-CN`. The same live test sent a Read Aloud request and confirmed that it retained `zh-CN` and returned the required matching-voice instruction rather than silently falling back to the browser default.
