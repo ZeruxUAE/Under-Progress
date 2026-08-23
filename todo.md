@@ -70,3 +70,4 @@
 - [ ] Re-run end-to-end selected-language website-to-extension Read Aloud handoff after the whole-interface translation change.
 - [ ] Document the accurate hybrid bundled-plus-free translation behavior and its verification results.
 - [ ] Use the known English source language for free whole-interface requests to reduce untranslated mixed-language fragments.
+- [ ] Replace the browser-hint language label inside translated prompts with the currently selected website language.
