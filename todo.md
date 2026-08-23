@@ -64,3 +64,4 @@
 - [ ] Translate the entire website interface through the free provider whenever a supported selected language changes.
 - [ ] Keep the translated website interface and extension Read Aloud language synchronized under the free translation model.
 - [ ] Switch the entire website interface to the selected language while retaining straightforward matching-language Read Aloud behavior.
+- [ ] Preserve protected product and accessibility terms correctly when free whole-interface translation normalizes placeholder markers.

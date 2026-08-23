@@ -1,5 +1,5 @@
 const MAX_BYTES = 430;
-const CACHE_PREFIX = "under-progress-interface-language-v1-";
+const CACHE_PREFIX = "under-progress-interface-language-v2-";
 
 function byteLength(value: string) { return new TextEncoder().encode(value).length; }
 
@@ -17,7 +17,7 @@ function protect(value: string) {
   const protectedValues: string[] = [];
   const pattern = /\{\w+\}|Under Progress|SAS|Chrome|Edge|GitHub|Read Aloud/g;
   const text = value.replace(pattern, match => { const token = `__UP${protectedValues.length}__`; protectedValues.push(match); return token; });
-  return { text, restore: (translated: string) => translated.replace(/__UP(\d+)__/g, (_match, index) => protectedValues[Number(index)] || "") };
+  return { text, restore: (translated: string) => translated.replace(/__\s*up\s*(\d+)\s*__/gi, (_match, index) => protectedValues[Number(index)] || "") };
 }
 
 async function translateText(value: string, target: string) {

@@ -1,0 +1,3 @@
+# Live full-interface translation verification
+
+On 23 August 2026, the deployed Vercel website was opened with Filipino (`tl-PH`) selected. The language dialog showed the restored global language list and the explicit progress state **“Translating the full website interface…”**. The free translation process advanced from 20 of 156 interface messages through 41, 75, and 92 messages during the live check, confirming that the selected language initiates whole-interface translation rather than only changing the speech voice. The selected locale continues to be stored for the extension Read Aloud handoff.
