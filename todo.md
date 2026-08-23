@@ -58,10 +58,15 @@
 - [x] Restore the comprehensive language selector with clear website-text and speech-translation coverage.
 - [x] Test expanded language saving, extension handoff, and publish the update.
 - [x] Run and record a live website-to-extension handoff test for a restored non-site-localized language such as Filipino (`tl-PH`).
-- [ ] Define the broad practical global language catalogue and selected-language translation behavior for the full website interface.
-- [ ] Make every visible website string follow the selected language across the global language catalogue.
-- [ ] Test global language selection, interface translation, accessibility direction, and extension handoff before publishing.
-- [ ] Translate the entire website interface through the free provider whenever a supported selected language changes.
-- [ ] Keep the translated website interface and extension Read Aloud language synchronized under the free translation model.
-- [ ] Switch the entire website interface to the selected language while retaining straightforward matching-language Read Aloud behavior.
-- [ ] Preserve protected product and accessibility terms correctly when free whole-interface translation normalizes placeholder markers.
+- [x] Define the broad practical global language catalogue and selected-language translation behavior for the full website interface.
+- [x] Make every visible website string follow the selected language across the global language catalogue.
+- [x] Test global language selection, interface translation, accessibility direction, and extension handoff before publishing.
+- [x] Translate the entire website interface through the free provider whenever a supported selected language changes.
+- [x] Keep the translated website interface and extension Read Aloud language synchronized under the free translation model.
+- [x] Switch the entire website interface to the selected language while retaining straightforward matching-language Read Aloud behavior.
+- [x] Preserve protected product and accessibility terms correctly when free whole-interface translation normalizes placeholder markers.
+- [ ] Improve remaining mixed-language interface strings and re-verify the completed non-English website text.
+- [ ] Verify a newly translated right-to-left language changes document direction and full interface text correctly.
+- [ ] Re-run end-to-end selected-language website-to-extension Read Aloud handoff after the whole-interface translation change.
+- [ ] Document the accurate hybrid bundled-plus-free translation behavior and its verification results.
+- [ ] Use the known English source language for free whole-interface requests to reduce untranslated mixed-language fragments.

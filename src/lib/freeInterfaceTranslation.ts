@@ -1,5 +1,5 @@
 const MAX_BYTES = 430;
-const CACHE_PREFIX = "under-progress-interface-language-v2-";
+const CACHE_PREFIX = "under-progress-interface-language-v3-";
 
 function byteLength(value: string) { return new TextEncoder().encode(value).length; }
 
@@ -23,7 +23,7 @@ function protect(value: string) {
 async function translateText(value: string, target: string) {
   const { text, restore } = protect(value);
   const translated = await Promise.all(splitText(text).map(async part => {
-    const query = new URLSearchParams({ q: part, langpair: `autodetect|${target}`, mt: "1" });
+    const query = new URLSearchParams({ q: part, langpair: `en|${target}`, mt: "1" });
     const response = await fetch(`https://api.mymemory.translated.net/get?${query}`);
     const data = await response.json();
     if (!response.ok || data.responseStatus !== 200 || !data.responseData?.translatedText) throw new Error(data.responseDetails || "The free translation service could not translate this interface.");
