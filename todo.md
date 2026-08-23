@@ -58,3 +58,9 @@
 - [x] Restore the comprehensive language selector with clear website-text and speech-translation coverage.
 - [x] Test expanded language saving, extension handoff, and publish the update.
 - [x] Run and record a live website-to-extension handoff test for a restored non-site-localized language such as Filipino (`tl-PH`).
+- [ ] Define the broad practical global language catalogue and selected-language translation behavior for the full website interface.
+- [ ] Make every visible website string follow the selected language across the global language catalogue.
+- [ ] Test global language selection, interface translation, accessibility direction, and extension handoff before publishing.
+- [ ] Translate the entire website interface through the free provider whenever a supported selected language changes.
+- [ ] Keep the translated website interface and extension Read Aloud language synchronized under the free translation model.
+- [ ] Switch the entire website interface to the selected language while retaining straightforward matching-language Read Aloud behavior.
