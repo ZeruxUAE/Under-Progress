@@ -73,4 +73,4 @@
 - [x] Replace the browser-hint language label inside translated prompts with the currently selected website language.
 - [ ] Complete a post-fix live translation in a non-bundled language and verify that its rendered interface has no unintended mixed-language fragments.
 - [x] Verify after the whole-interface change that a selected website locale is used during an actual extension Read Aloud request.
-- [ ] Keep whole-interface language translation strictly no-cost, documenting the bundled-language coverage and honest free-provider availability limits.
+- [x] Keep whole-interface language translation strictly no-cost, documenting the bundled-language coverage and honest free-provider availability limits.
