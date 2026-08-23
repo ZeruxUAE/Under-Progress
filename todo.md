@@ -22,3 +22,7 @@
 - [x] Test, publish, and verify the repaired language confirmation action on Vercel.
 - [x] Verify the visible saved-state message and button text after language confirmation on live Vercel.
 - [x] Confirm the saved language and document language update on live Vercel.
+- [ ] Trace and repair the website-to-extension language handoff for Read Aloud.
+- [ ] Verify the extension selects a matching voice for the saved language and reports fallback behavior clearly.
+- [ ] Add bold website guidance that language selection controls extension Read Aloud.
+- [ ] Test, release, and publish the website and extension language synchronization update.
