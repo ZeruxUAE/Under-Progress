@@ -80,3 +80,22 @@ The revised deck should explicitly reflect the latest product state from the web
 The final pages add a trust model and a clear MVP demonstration plan. Trust is framed as part of accessibility: profiles stay in browser-local storage, every control is reversible, the website-to-extension connection needs a visible action, and browser language is a hint rather than an identity label. The presentation should retain the central line **“No hidden mode.”**
 
 The final hackathon MVP asks the team to demonstrate three things: a personalised support flow from multiple self-selected needs to saved settings, continuity beyond the platform through the extension on a normal webpage, and a consent-based route from a student check-in to a human Student Accessibility Services request. The chosen challenge remains **Student Accessibility Services**.
+
+## Slide-by-slide parity review
+
+| Slide | Current website/PDF coverage confirmed | Review result |
+|---|---|---|
+| 1. Title | Consent-first student accessibility companion; SAS challenge; support rather than diagnosis; extension continuity. | Confirmed unchanged. |
+| 2. Problem | The barrier is the default environment, not the person; flexible reading, navigation, and labels. | Confirmed unchanged. |
+| 3. Why it matters | Digital participation across education, work, and services; bounded 6-in-10 World Bank/GPE literacy statistic. | Confirmed unchanged. |
+| 4. Our idea | Website as core learning/support experience; extension as continuity layer; self-selected needs. | Confirmed unchanged. |
+| 5. Access without reading | Voice-first, icon-led, short-step, human-supported path; no diagnostic claim. | Confirmed unchanged. |
+| 6. Student journey | Choose needs, choose language, check in, reach SAS support, continue anywhere; meaningful consent. | Confirmed unchanged. |
+| 7. Personalization | Multiple needs, no forced label, user control, dyslexia/ADHD/sensory/vision/mobility examples. | Confirmed unchanged. |
+| 8. Extension | Reading controls, presets, portable continuity, selected-language Read Aloud, matching-voice boundary. | **Updated** for current language-aware Read Aloud behavior. |
+| 9. Support not diagnosis | Student control, minimal data, explainable signals, human referral with consent. | Confirmed unchanged. |
+| 10. Language access | Five-second prompt, browser hint not IP tracking, dropdown, saved extension language, matching installed voice only, explicit no-silent-fallback behavior. | **Updated** for the Chinese/non-Latin repair. |
+| 11. Trust | Local storage, reversibility, visible connection, browser-language hint, no hidden fallback mode. | **Updated** for selected-language speech transparency. |
+| 12. Vision | Personalised flow, extension continuity, responsible consent-based SAS escalation. | Confirmed unchanged. |
+
+This review confirms that the deck contains the current public website narrative, the complete attached-PDF narrative, and the latest language-aware extension behavior. The only material newly added after comparison was the exact selected-language Read Aloud behavior and transparent missing-voice response.

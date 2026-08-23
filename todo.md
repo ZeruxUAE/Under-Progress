@@ -26,7 +26,9 @@
 - [x] Verify the extension selects a matching voice for the saved language and reports fallback behavior clearly.
 - [x] Add bold website guidance that language selection controls extension Read Aloud.
 - [x] Test, release, and publish the website and extension language synchronization update.
-- [ ] Diagnose and repair selected-language speech for Chinese and other non-Latin languages in the extension.
-- [ ] Add regression coverage for script/language compatibility and clear read-aloud error states.
-- [ ] Compare the attached project PDF and current website against the presentation, then add all missing product material.
-- [ ] Present and deliver the revised Under Progress deck after product and language updates are complete.
+- [x] Diagnose and repair selected-language speech for Chinese and other non-Latin languages in the extension.
+- [x] Add regression coverage for script/language compatibility and clear read-aloud error states.
+- [x] Compare the attached project PDF and current website against the presentation, then add all missing product material.
+- [x] Present and deliver the revised Under Progress deck after product and language updates are complete.
+- [x] Review every deck slide against the current website and attached PDF, recording updated and unchanged slides.
+- [x] Re-present the deck after completing the slide-by-slide parity review.
