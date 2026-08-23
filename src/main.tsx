@@ -4,6 +4,8 @@ import "./index.css";
 
 createRoot(document.getElementById("root")!).render(<App />);
 
-if ("serviceWorker" in navigator) {
-  window.addEventListener("load", () => navigator.serviceWorker.register("/sw.js").catch(() => undefined));
+const isLocalDevelopment = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1";
+
+if ("serviceWorker" in navigator && !isLocalDevelopment) {
+  window.addEventListener("load", () => navigator.serviceWorker.register("/sw.js", { updateViaCache: "none" }).catch(() => undefined));
 }

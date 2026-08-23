@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "check": "tsc --noEmit"
+    "check": "tsc --noEmit",
+    "test": "vitest run"
   },
   "dependencies": {
     "lucide-react": "^0.453.0",
@@ -23,6 +24,7 @@
     "tailwindcss": "^4.1.14",
     "tw-animate-css": "^1.4.0",
     "typescript": "^5.6.3",
-    "vite": "^7.1.7"
+    "vite": "^7.1.7",
+    "vitest": "^2.1.9"
   }
 }
