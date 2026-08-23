@@ -16,4 +16,4 @@
 - [x] Commit and publish the complete reader repair and verification harness, then verify Vercel.
 - [x] Remove the mobile browser reader route, its reader tests, and PWA installation files.
 - [x] Restore desktop-first homepage and setup messaging with Chrome/Edge extension guidance.
-- [ ] Validate, publish, and verify the desktop-focused Vercel update.
+- [x] Validate, publish, and verify the desktop-focused Vercel update.
