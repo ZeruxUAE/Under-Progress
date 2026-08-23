@@ -38,3 +38,6 @@
 - [x] Verify the stable latest-download extension package resolves to version 0.5.5.
 - [x] Verify the live Vercel setup flow stops checking and shows either a successful connection or clear reload guidance after an extension reload.
 - [x] Run a real published-extension reload test against live Vercel setup and record the result.
+- [ ] Audit all public website text and define the supported translated content for the saved language preference.
+- [ ] Make the browser-language hint select only the initial website language, with the dropdown changing the full visible website text and document direction when needed.
+- [ ] Preserve the language handoff to the extension, add regression coverage, and publish the multilingual website update.

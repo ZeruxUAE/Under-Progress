@@ -1,4 +1,5 @@
 import { describe, expect, it } from "vitest";
+import { resolveLanguage } from "./i18n";
 import { languageStorageKey, saveLanguagePreference } from "./languagePreference";
 
 describe("language preference persistence", () => {
@@ -16,5 +17,12 @@ describe("language preference persistence", () => {
   it("uses English when an empty value is supplied", () => {
     const storage = { getItem: () => null, setItem: () => undefined };
     expect(saveLanguagePreference(storage, "  ")).toBe("en");
+  });
+
+  it("maps browser language hints to translated website languages", () => {
+    expect(resolveLanguage("zh-CN")).toBe("zh-CN");
+    expect(resolveLanguage("zh-HK")).toBe("zh-TW");
+    expect(resolveLanguage("ar-AE")).toBe("ar");
+    expect(resolveLanguage("de-DE")).toBe("en");
   });
 });
