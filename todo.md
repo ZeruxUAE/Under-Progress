@@ -12,5 +12,5 @@
 - [x] Interactively verify text, spacing, contrast, focus, and read-aloud pause/resume on desktop.
 - [x] Interactively verify the same reader controls at a phone-sized viewport.
 - [x] Record the full interactive verification results and publish any final repair if needed.
-- [ ] Verify read-aloud resume explicitly at desktop and phone-sized viewports.
-- [ ] Commit and publish the complete reader repair and verification harness, then verify Vercel.
+- [x] Verify read-aloud resume explicitly at desktop and phone-sized viewports.
+- [x] Commit and publish the complete reader repair and verification harness, then verify Vercel.
