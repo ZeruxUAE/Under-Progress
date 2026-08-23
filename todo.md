@@ -6,6 +6,11 @@
 - [x] Validate the website at Android/iOS-sized viewports and desktop, then publish the Vercel update.
 - [x] Commit and push the cross-platform mobile-first website changes to the Vercel-connected main branch.
 - [x] Verify the resulting Vercel deployment for the mobile-first update.
-- [ ] Reproduce and identify the browser reading-tool failures on the live site.
-- [ ] Repair text, spacing, contrast, focus, and read-aloud controls with regression coverage.
-- [ ] Validate the repaired controls on mobile and desktop, then publish and verify Vercel deployment.
+- [x] Reproduce and identify the browser reading-tool failures on the live site.
+- [x] Repair text, spacing, contrast, focus, and read-aloud controls with regression coverage.
+- [x] Validate the repaired controls on mobile and desktop, then publish and verify Vercel deployment.
+- [x] Interactively verify text, spacing, contrast, focus, and read-aloud pause/resume on desktop.
+- [x] Interactively verify the same reader controls at a phone-sized viewport.
+- [x] Record the full interactive verification results and publish any final repair if needed.
+- [ ] Verify read-aloud resume explicitly at desktop and phone-sized viewports.
+- [ ] Commit and publish the complete reader repair and verification harness, then verify Vercel.
