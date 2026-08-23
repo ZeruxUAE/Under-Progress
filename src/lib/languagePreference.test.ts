@@ -28,6 +28,7 @@ describe("language preference persistence", () => {
 
   it("preserves the localized choice in the website-to-extension language message", () => {
     expect(extensionLanguageMessage("zh-CN")).toEqual({ source: "under-progress-website", type: "set-language", language: "zh-CN" });
-    expect(extensionLanguageMessage("ar-AE")).toEqual({ source: "under-progress-website", type: "set-language", language: "ar" });
+    expect(extensionLanguageMessage("ar-AE")).toEqual({ source: "under-progress-website", type: "set-language", language: "ar-AE" });
+    expect(extensionLanguageMessage("hi-IN")).toEqual({ source: "under-progress-website", type: "set-language", language: "hi-IN" });
   });
 });

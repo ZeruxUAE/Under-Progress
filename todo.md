@@ -54,3 +54,6 @@
 - [x] Verify on a normal English webpage that translated text, not English source text, is sent to speech with an available target-language voice.
 - [x] Record the completed end-to-end translated-speech verification result.
 - [x] Commit and verify the final v0.5.7 translated-speech verification note in the production repository.
+- [ ] Audit the previously available language options and free translation-provider support.
+- [ ] Restore the comprehensive language selector with clear website-text and speech-translation coverage.
+- [ ] Test expanded language saving, extension handoff, and publish the update.
