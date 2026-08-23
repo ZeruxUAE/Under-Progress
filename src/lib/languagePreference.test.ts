@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { resolveLanguage } from "./i18n";
+import { extensionLanguageMessage, resolveLanguage } from "./i18n";
 import { languageStorageKey, saveLanguagePreference } from "./languagePreference";
 
 describe("language preference persistence", () => {
@@ -24,5 +24,10 @@ describe("language preference persistence", () => {
     expect(resolveLanguage("zh-HK")).toBe("zh-TW");
     expect(resolveLanguage("ar-AE")).toBe("ar");
     expect(resolveLanguage("de-DE")).toBe("en");
+  });
+
+  it("preserves the localized choice in the website-to-extension language message", () => {
+    expect(extensionLanguageMessage("zh-CN")).toEqual({ source: "under-progress-website", type: "set-language", language: "zh-CN" });
+    expect(extensionLanguageMessage("ar-AE")).toEqual({ source: "under-progress-website", type: "set-language", language: "ar" });
   });
 });

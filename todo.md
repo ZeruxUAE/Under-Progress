@@ -38,6 +38,9 @@
 - [x] Verify the stable latest-download extension package resolves to version 0.5.5.
 - [x] Verify the live Vercel setup flow stops checking and shows either a successful connection or clear reload guidance after an extension reload.
 - [x] Run a real published-extension reload test against live Vercel setup and record the result.
-- [ ] Audit all public website text and define the supported translated content for the saved language preference.
-- [ ] Make the browser-language hint select only the initial website language, with the dropdown changing the full visible website text and document direction when needed.
-- [ ] Preserve the language handoff to the extension, add regression coverage, and publish the multilingual website update.
+- [x] Audit all public website text and define the supported translated content for the saved language preference.
+- [x] Make the browser-language hint select only the initial website language, with the dropdown changing the full visible website text and document direction when needed.
+- [x] Preserve the language handoff to the extension, add regression coverage, and publish the multilingual website update.
+- [ ] Localize the document title and description alongside the selected website language.
+- [ ] Add and run a post-localization regression check confirming the selected website language still reaches extension Read Aloud.
+- [ ] Document the live post-localization language handoff verification result.
