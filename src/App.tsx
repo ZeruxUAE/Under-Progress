@@ -1,6 +1,7 @@
 import { Route, Switch } from "wouter";
 import { LanguagePrompt } from "./components/LanguagePrompt";
 import Home from "./pages/Home";
+import Learn from "./pages/Learn";
 import Setup from "./pages/Setup";
 
 function NotFound() {
@@ -8,5 +9,5 @@ function NotFound() {
 }
 
 export default function App() {
-  return <><Switch><Route path="/" component={Home} /><Route path="/setup" component={Setup} /><Route component={NotFound} /></Switch><LanguagePrompt /></>;
+  return <><Switch><Route path="/" component={Home} /><Route path="/learn" component={Learn} /><Route path="/setup" component={Setup} /><Route component={NotFound} /></Switch><LanguagePrompt /></>;
 }
