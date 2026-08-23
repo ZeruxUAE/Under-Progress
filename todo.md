@@ -32,3 +32,6 @@
 - [x] Present and deliver the revised Under Progress deck after product and language updates are complete.
 - [x] Review every deck slide against the current website and attached PDF, recording updated and unchanged slides.
 - [x] Re-present the deck after completing the slide-by-slide parity review.
+- [ ] Reproduce the endless extension-check state caused by an invalidated extension context after an extension update or reload.
+- [ ] Make the website-extension bridge lifecycle-safe and provide a clear recoverable connection state.
+- [ ] Add regression coverage, publish the repair, and verify the Vercel and extension release behavior.
