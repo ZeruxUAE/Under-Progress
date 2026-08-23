@@ -45,3 +45,12 @@
 - [x] Add and run a post-localization regression check confirming the selected website language still reaches extension Read Aloud.
 - [x] Document the live post-localization language handoff verification result.
 - [x] Run an integrated post-localization language bridge test that confirms a selected website language drives extension Read Aloud settings.
+- [x] Assess a privacy-conscious translation path for converting selected webpage text into the user’s saved Read Aloud language.
+- [x] Translate webpage text before selected-language Read Aloud, with clear progress and failure states.
+- [x] Add regression coverage, publish the extension update, and verify translation-to-speech on a normal English webpage.
+- [x] Validate a free no-signup translation provider, including request limits, language coverage, and privacy disclosure.
+- [x] Implement opt-in free translation before selected-language Read Aloud and publish the update.
+- [x] Show a visible translation-in-progress status in the extension popup before speech begins.
+- [x] Verify on a normal English webpage that translated text, not English source text, is sent to speech with an available target-language voice.
+- [x] Record the completed end-to-end translated-speech verification result.
+- [ ] Commit and verify the final v0.5.7 translated-speech verification note in the production repository.
