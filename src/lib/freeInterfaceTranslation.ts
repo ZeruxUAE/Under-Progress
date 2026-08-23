@@ -1,5 +1,10 @@
 const MAX_BYTES = 430;
-const CACHE_PREFIX = "under-progress-interface-language-v3-";
+const CACHE_PREFIX = "under-progress-interface-language-v4-";
+
+type TranslationCache = {
+  messages: Record<string, string>;
+  complete: boolean;
+};
 
 function byteLength(value: string) { return new TextEncoder().encode(value).length; }
 
@@ -42,18 +47,33 @@ async function mapWithLimit<T>(items: T[], limit: number, map: (item: T, index: 
 export async function loadOrTranslateInterface(source: Record<string, string>, language: string, onProgress?: (completed: number, total: number) => void) {
   const target = language.toLowerCase().startsWith("zh-") ? language : language.split("-")[0];
   const cacheKey = `${CACHE_PREFIX}${language}`;
+  let cache: TranslationCache = { messages: {}, complete: false };
   try {
     const cached = window.localStorage.getItem(cacheKey);
-    if (cached) return JSON.parse(cached) as Record<string, string>;
+    if (cached) {
+      const parsed = JSON.parse(cached) as TranslationCache;
+      if (parsed?.messages && typeof parsed.messages === "object") cache = parsed;
+    }
   } catch {}
   const entries = Object.entries(source);
-  const translated: Record<string, string> = {};
-  let completed = 0;
-  await mapWithLimit(entries, 2, async ([key, value]) => {
-    translated[key] = await translateText(value, target);
-    completed += 1;
-    onProgress?.(completed, entries.length);
-  });
-  try { window.localStorage.setItem(cacheKey, JSON.stringify(translated)); } catch {}
+  const translated: Record<string, string> = { ...cache.messages };
+  let completed = entries.filter(([key]) => typeof translated[key] === "string").length;
+  const persist = (complete: boolean) => {
+    try { window.localStorage.setItem(cacheKey, JSON.stringify({ messages: translated, complete } satisfies TranslationCache)); } catch {}
+  };
+  onProgress?.(completed, entries.length);
+  if (completed === entries.length && cache.complete) return translated;
+  try {
+    await mapWithLimit(entries.filter(([key]) => typeof translated[key] !== "string"), 2, async ([key, value]) => {
+      translated[key] = await translateText(value, target);
+      completed += 1;
+      persist(false);
+      onProgress?.(completed, entries.length);
+    });
+  } catch (error) {
+    persist(false);
+    throw error;
+  }
+  persist(true);
   return translated;
 }

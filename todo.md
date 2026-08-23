@@ -65,9 +65,12 @@
 - [x] Keep the translated website interface and extension Read Aloud language synchronized under the free translation model.
 - [x] Switch the entire website interface to the selected language while retaining straightforward matching-language Read Aloud behavior.
 - [x] Preserve protected product and accessibility terms correctly when free whole-interface translation normalizes placeholder markers.
-- [ ] Improve remaining mixed-language interface strings and re-verify the completed non-English website text.
-- [ ] Verify a newly translated right-to-left language changes document direction and full interface text correctly.
-- [ ] Re-run end-to-end selected-language website-to-extension Read Aloud handoff after the whole-interface translation change.
-- [ ] Document the accurate hybrid bundled-plus-free translation behavior and its verification results.
-- [ ] Use the known English source language for free whole-interface requests to reduce untranslated mixed-language fragments.
-- [ ] Replace the browser-hint language label inside translated prompts with the currently selected website language.
+- [x] Improve remaining mixed-language interface strings and re-verify the completed non-English website text.
+- [x] Verify a newly translated right-to-left language changes document direction and full interface text correctly.
+- [x] Re-run end-to-end selected-language website-to-extension Read Aloud handoff after the whole-interface translation change.
+- [x] Document the accurate hybrid bundled-plus-free translation behavior and its verification results.
+- [x] Use the known English source language for free whole-interface requests to reduce untranslated mixed-language fragments.
+- [x] Replace the browser-hint language label inside translated prompts with the currently selected website language.
+- [ ] Complete a post-fix live translation in a non-bundled language and verify that its rendered interface has no unintended mixed-language fragments.
+- [x] Verify after the whole-interface change that a selected website locale is used during an actual extension Read Aloud request.
+- [ ] Keep whole-interface language translation strictly no-cost, documenting the bundled-language coverage and honest free-provider availability limits.
