@@ -17,3 +17,6 @@
 - [x] Remove the mobile browser reader route, its reader tests, and PWA installation files.
 - [x] Restore desktop-first homepage and setup messaging with Chrome/Edge extension guidance.
 - [x] Validate, publish, and verify the desktop-focused Vercel update.
+- [x] Reproduce the language confirmation action failure on the live site.
+- [x] Make language saving visible and verify the button updates local preference state.
+- [ ] Test, publish, and verify the repaired language confirmation action on Vercel.
